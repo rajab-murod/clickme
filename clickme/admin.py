@@ -8,8 +8,8 @@ class TransactionModelAdmin(admin.ModelAdmin):
         return obj.get_status_display()
     get_status.short_description = 'status'
 
-    search_fields = ('request_id',)
-    list_display = ['payment_id', 'request_id', 'amount', 'get_status', 'create_time', 'pay_time']
+    search_fields = ('order_id',)
+    list_display = ['payment_id', 'order_id', 'amount', 'get_status', 'create_time', 'pay_time']
 
 
 admin.site.register(Transaction, TransactionModelAdmin)
